@@ -1,0 +1,6 @@
+1. Get images from the ODT file and Publish them
+2. Check for the required software and report, if they are not installed
+3. Add logging
+4. Publish all the ODT files in a directory
+5. Get the Wordpress Password in Runtime for security
+
