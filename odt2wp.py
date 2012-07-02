@@ -1,4 +1,7 @@
 #Program to convert a LibreOffice Document ODT file to a Wordpress Blog Post
+#Author: T Shrinivasan 
+#Email: tshrinivasan@gmail.com
+
 
 import lxml.html.clean as clean
 import codecs

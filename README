@@ -1,0 +1,10 @@
+This is a tool to publish the articles from the LibreOffice ODT files.
+First, we convert the ODT file to HTML file.
+Then, we strip and clean it.
+Then, we upload to the provided wordpress site.
+
+
+
+Author: T Shrinivasan
+Email: tshrinivasan@gmail.com
+Blog: http://goinggnu.wordpress.com

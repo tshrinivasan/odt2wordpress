@@ -1,0 +1,16 @@
+
+1. Install odt2html
+
+	sudo apt-get install unoconv
+
+2. Install python-wordpress-xmlrpc
+
+    Verify you meet the following requirements:
+
+            WordPress 3.4+ OR WordPress 3.0-3.3 with the XML-RPC Modernization Plugin.
+            Python 2.6+ OR Python 3.x
+
+    Install from PyPI using easy_install python-wordpress-xmlrpc or pip install python-wordpress-xmlrpc.
+
+
+
