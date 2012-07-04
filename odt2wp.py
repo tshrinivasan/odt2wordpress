@@ -10,12 +10,14 @@ import os
 from os.path import basename
 import subprocess 
 
+#Installation method for unoconv
 def install_odt2html():
   print "odt2html not found - Installing..."
   subprocess.call("sudo apt-get install unoconv",shell=True)
   print "odt2html - Successfully Installed"
   subprocess.call(["odt2html",sys.argv[1]])
 
+# Installation method for wordpress sdk
 def install_wordpress_xmlrpc():
   print "module wordpress_xmlrpc not found - Installing"
   subprocess.call("sudo pip install python-wordpress-xmlrpc",shell=True)
