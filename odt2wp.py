@@ -8,8 +8,26 @@ import codecs
 import sys
 import os
 from os.path import basename
-from subprocess import call
-call(["odt2html",sys.argv[1]])
+import subprocess 
+
+def install_odt2html():
+  print "odt2html not found - Installing..."
+  subprocess.call("sudo apt-get install unoconv",shell=True)
+  print "odt2html - Successfully Installed"
+  subprocess.call(["odt2html",sys.argv[1]])
+
+def install_wordpress_xmlrpc():
+  print "module wordpress_xmlrpc not found - Installing"
+  subprocess.call("sudo pip install python-wordpress-xmlrpc",shell=True)
+  print "wordpress_xmlrpc - Successfully Installed"
+  from wordpress_xmlrpc import Client, WordPressPost
+
+try:
+  subprocess.call(["odt2html",sys.argv[1]])
+except:
+  install_odt2html()
+
+
 name = basename(sys.argv[1])
 name = os.path.splitext(sys.argv[1])[0]
 
@@ -36,8 +54,11 @@ f2.write(" ".join(outputList))
 f2.close()
 
 
+try:
+  from wordpress_xmlrpc import Client, WordPressPost
+except ImportError:
+  install_wordpress_xmlrpc()
 
-from wordpress_xmlrpc import Client, WordPressPost
 from wordpress_xmlrpc.methods.posts import GetPosts, NewPost
 from wordpress_xmlrpc.methods.users import GetUserInfo
 wp = Client('http://localhost/wordpress/xmlrpc.php', 'admin', 'admin')
