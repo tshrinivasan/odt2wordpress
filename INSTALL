@@ -1,3 +1,5 @@
+OS : Ubuntu 12.04 and greater
+
 
 1. Install odt2html
 
@@ -11,6 +13,9 @@
             Python 2.6+ OR Python 3.x
 
     Install from PyPI using easy_install python-wordpress-xmlrpc or pip install python-wordpress-xmlrpc.
+
+	sudo apt-get install python-pip
+	sudo easy_install python-wordpress-xmlrpc
 
 
 
