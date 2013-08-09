@@ -1,0 +1,48 @@
+1. 
+Install the Required Software
+
+sudo apt-get install unoconv
+sudo apt-get install python-pip
+sudo easy_install python-wordpress-xmlrpc
+
+
+2.
+Get login details for a wordpress site.
+Put them in the file odt2wp.py
+
+wordpress_rpc_url = "TYPE XML RPC URL FOR WORDPRESS HERE"
+wordpress_username = "TYPE WORDPRESS USERNAME HERE"
+wordpress_password = "TYPE WORDPRESS PASSWORD HERE"
+
+3.
+create a odt file.
+
+example:
+
+test.odt
+
+
+4.
+Push this file to the wordpress site.
+
+python odt2wp.py test.odt
+
+
+5.
+This will upload the test.odt content and the images into the given wordpress site.
+A new blog post will be created.
+The post will be as Draft only.
+
+Login to the site and check for the image alignments.
+Images might be disaligned.
+Fix the positions of the images.
+
+Then, Publish the post.
+
+
+Write to me for any queries at tshrinivasan@gmail.com
+
+Thanks for using this software.
+
+
+
